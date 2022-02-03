@@ -3,7 +3,13 @@ public class TestMain {
 //        SingleLinkedList<Integer> MyLinkedList = new SingleLinkedList<Integer>();
 //        MyLinkedList.test(MyLinkedList);
 
-        DoubleLinkedList<Integer> dll = new DoubleLinkedList<>();
-        dll.test(dll);
+//        DoubleLinkedList<Integer> dll = new DoubleLinkedList<>();
+//        dll.test(dll);
+
+//        HashTableWithChaining htc = new HashTableWithChaining(20);
+//        htc.test(htc);
+
+        HashTableWithLinearProbing htlp = new HashTableWithLinearProbing(20);
+        htlp.test(htlp);
     }
 }
