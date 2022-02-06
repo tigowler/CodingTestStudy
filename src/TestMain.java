@@ -9,7 +9,10 @@ public class TestMain {
 //        HashTableWithChaining htc = new HashTableWithChaining(20);
 //        htc.test(htc);
 
-        HashTableWithLinearProbing htlp = new HashTableWithLinearProbing(20);
-        htlp.test(htlp);
+//        HashTableWithLinearProbing htlp = new HashTableWithLinearProbing(20);
+//        htlp.test(htlp);
+
+        BinaryTree tree = new BinaryTree();
+        tree.test(tree);
     }
 }
