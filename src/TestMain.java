@@ -1,14 +1,11 @@
-import dataStructure.BinaryTree;
-import sort.BubbleSort;
-import sort.InsertionSort;
-import sort.MergeSort;
-import sort.SelectionSort;
+import sort.QuickSort;
 
 import java.util.ArrayList;
 
 public class TestMain {
     public static void main(String[] args) {
-
+        QuickSort quickSort = new QuickSort();
+        quickSort.test(createRandomArray());
     }
 
 
