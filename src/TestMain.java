@@ -1,5 +1,6 @@
 import dataStructure.BinaryTree;
 import sort.BubbleSort;
+import sort.SelectionSort;
 
 import java.util.ArrayList;
 
@@ -20,7 +21,8 @@ public class TestMain {
 //        BinaryTree tree = new BinaryTree();
 //        tree.test(tree);
 
-        bubbleSortTest();
+//        bubbleSortTest();
+        selectionSortTest();
     }
 
     public static void bubbleSortTest(){
@@ -30,5 +32,15 @@ public class TestMain {
         }
         BubbleSort bubbleSort = new BubbleSort();
         System.out.println(bubbleSort.sort(testData));
+    }
+
+    public static void selectionSortTest(){
+        ArrayList<Integer> testData = new ArrayList<Integer>();
+
+        for (int i = 0; i<100; i++){
+            testData.add((int)(Math.random()*100));
+        }
+        SelectionSort selectionSort = new SelectionSort();
+        System.out.println(selectionSort.sort(testData));
     }
 }
