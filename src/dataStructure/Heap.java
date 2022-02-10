@@ -1,7 +1,9 @@
+package dataStructure;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
-//Max Heap
+//Max dataStructure.Heap
 //parent node's index = child node's index / 2
 //left child node's index = parent node's index * 2
 //right child node's index = parent node's index * 2 + 1

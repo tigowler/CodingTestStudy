@@ -1,3 +1,5 @@
+package dataStructure;
+
 public class DoubleLinkedList<T> {
     public Node<T> head = null;
     public Node<T> tail = null;

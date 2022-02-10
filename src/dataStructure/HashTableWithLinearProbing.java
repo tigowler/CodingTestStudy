@@ -1,4 +1,4 @@
-//시간복잡도
+package dataStructure;//시간복잡도
 //1) Collision이 없는 경우 O(1)
 //2) Collision이 모두 발생하는 경우 O(n)
 
