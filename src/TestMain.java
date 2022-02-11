@@ -1,11 +1,15 @@
+import graph.KruskalAlgorithm;
 import sort.QuickSort;
 
 import java.util.ArrayList;
 
 public class TestMain {
     public static void main(String[] args) {
-        QuickSort quickSort = new QuickSort();
-        quickSort.test(createRandomArray());
+//        QuickSort quickSort = new QuickSort();
+//        quickSort.test(createRandomArray());
+
+        KruskalAlgorithm kruskalAlgorithm = new KruskalAlgorithm();
+        kruskalAlgorithm.test();
     }
 
 
