@@ -1,4 +1,5 @@
 import graph.KruskalAlgorithm;
+import graph.PrimAlgorithm;
 import sort.QuickSort;
 
 import java.util.ArrayList;
@@ -8,8 +9,11 @@ public class TestMain {
 //        QuickSort quickSort = new QuickSort();
 //        quickSort.test(createRandomArray());
 
-        KruskalAlgorithm kruskalAlgorithm = new KruskalAlgorithm();
-        kruskalAlgorithm.test();
+//        KruskalAlgorithm kruskalAlgorithm = new KruskalAlgorithm();
+//        kruskalAlgorithm.test();
+
+        PrimAlgorithm primAlgorithm = new PrimAlgorithm();
+        primAlgorithm.test();
     }
 
 
