@@ -1,3 +1,5 @@
+import graph.ImprovedPrimAlgorithm;
+import graph.ImprovedPrimEdge;
 import graph.KruskalAlgorithm;
 import graph.PrimAlgorithm;
 import sort.QuickSort;
@@ -12,8 +14,11 @@ public class TestMain {
 //        KruskalAlgorithm kruskalAlgorithm = new KruskalAlgorithm();
 //        kruskalAlgorithm.test();
 
-        PrimAlgorithm primAlgorithm = new PrimAlgorithm();
-        primAlgorithm.test();
+//        PrimAlgorithm primAlgorithm = new PrimAlgorithm();
+//        primAlgorithm.test();
+
+        ImprovedPrimAlgorithm improvedPrimAlgorithm = new ImprovedPrimAlgorithm();
+        improvedPrimAlgorithm.test();
     }
 
 
