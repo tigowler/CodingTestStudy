@@ -1,7 +1,4 @@
-import graph.ImprovedPrimAlgorithm;
-import graph.ImprovedPrimEdge;
-import graph.KruskalAlgorithm;
-import graph.PrimAlgorithm;
+import graph.*;
 import sort.QuickSort;
 
 import java.util.ArrayList;
@@ -17,8 +14,11 @@ public class TestMain {
 //        PrimAlgorithm primAlgorithm = new PrimAlgorithm();
 //        primAlgorithm.test();
 
-        ImprovedPrimAlgorithm improvedPrimAlgorithm = new ImprovedPrimAlgorithm();
-        improvedPrimAlgorithm.test();
+//        ImprovedPrimAlgorithm improvedPrimAlgorithm = new ImprovedPrimAlgorithm();
+//        improvedPrimAlgorithm.test();
+
+        NQueen nQueen = new NQueen();
+        nQueen.test();
     }
 
 
