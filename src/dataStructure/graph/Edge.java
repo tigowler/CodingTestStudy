@@ -1,4 +1,4 @@
-package graph;
+package dataStructure.graph;
 
 public class Edge implements Comparable<Edge>{
     public int weight;

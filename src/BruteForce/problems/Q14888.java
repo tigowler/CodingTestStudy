@@ -1,10 +1,8 @@
-package questions;
+package BruteForce.problems;
 
 import java.util.Scanner;
 
-//+, -, *, /
-//#14888
-public class BruteForcePlus {
+public class Q14888 {
     static int N, max, min;
     static int[] nums, operators, order;
     public static StringBuilder sb = new StringBuilder();

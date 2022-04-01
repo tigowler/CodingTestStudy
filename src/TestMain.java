@@ -1,5 +1,4 @@
-import graph.*;
-import sort.QuickSort;
+import dataStructure.graph.*;
 
 import java.util.ArrayList;
 

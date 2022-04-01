@@ -1,9 +1,8 @@
-package questions;
+package BruteForce.problems;
 
 import java.util.Scanner;
 
-//#9663
-public class NQueen {
+public class Q9663 {
     static StringBuilder sb = new StringBuilder();
     static int N, ans;
     static int[] col;

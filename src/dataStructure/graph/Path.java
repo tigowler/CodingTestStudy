@@ -1,4 +1,4 @@
-package graph;
+package dataStructure.graph;
 
 public class Path {
     public String node1;

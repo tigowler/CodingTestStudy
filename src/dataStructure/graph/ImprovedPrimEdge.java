@@ -1,4 +1,4 @@
-package graph;
+package dataStructure.graph;
 
 public class ImprovedPrimEdge implements Comparable<ImprovedPrimEdge>{
     public String node;

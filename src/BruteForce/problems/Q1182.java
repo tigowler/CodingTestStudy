@@ -1,4 +1,4 @@
-package questions;
+package BruteForce.problems;
 
 import java.util.Arrays;
 import java.util.Scanner;
