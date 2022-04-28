@@ -1,4 +1,4 @@
-package questions;
+package SortApplication;
 
 import java.util.Arrays;
 import java.util.Objects;
