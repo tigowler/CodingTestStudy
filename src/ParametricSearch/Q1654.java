@@ -1,4 +1,4 @@
-package questions;
+package ParametricSearch;
 
 import java.io.*;
 import java.util.StringTokenizer;

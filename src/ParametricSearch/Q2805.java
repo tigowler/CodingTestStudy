@@ -1,4 +1,4 @@
-package questions;
+package ParametricSearch;
 
 import java.util.Scanner;
 

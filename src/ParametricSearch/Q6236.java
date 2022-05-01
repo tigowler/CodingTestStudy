@@ -1,17 +1,17 @@
-package questions;
+package ParametricSearch;
 
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Q13702 {
+public class Q6236 {
     static FastReader in = new FastReader();
     static StringBuilder sb = new StringBuilder();
-    static int N, K;
+    static int N, M;
     static int[] A;
 
     static void input(){
         N = in.nextInt();
-        K = in.nextInt();
+        M = in.nextInt();
         A = new int[N+1];
         for (int i=1; i<=N; i++){
             A[i] = in.nextInt();
@@ -19,26 +19,31 @@ public class Q13702 {
     }
 
     static boolean determination(int X){
-        int count = 0;
+        int count=1, rest=X;
         for (int i=1; i<=N; i++){
-            if (A[i]/X>=1){
-                count+=A[i]/X;
+            if (rest<A[i]){
+                rest=X;
+                count++;
             }
+            rest-=A[i];
         }
-
-        return count>=K;
+        return count<=M;
     }
 
     static void pro(){
-        long L = 1, R = Integer.MAX_VALUE, ans=0;
+        int L = A[1];
+        for (int i=1; i<=N; i++){
+            L = Math.max(L, A[i]);
+        }
+        int R=10000*N, ans=0;
         while(L<=R){
-            long mid = (L+R)/2;
-            if (determination((int)mid)){
-                L = mid+1;
+            int mid = (L+R)/2;
+            if (determination(mid)){
+                R = mid-1;
                 ans = mid;
             }
             else {
-                R = mid-1;
+                L = mid+1;
             }
         }
 

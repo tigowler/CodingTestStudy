@@ -1,49 +1,47 @@
-package questions;
+package ParametricSearch;
 
 import java.io.*;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Q17266 {
+public class Q13702 {
     static FastReader in = new FastReader();
     static StringBuilder sb = new StringBuilder();
-    static int N, M;
+    static int N, K;
     static int[] A;
 
     static void input(){
         N = in.nextInt();
-        M = in.nextInt();
-        A = new int[M+1];
-        for (int i=1; i<=M; i++){
+        K = in.nextInt();
+        A = new int[N+1];
+        for (int i=1; i<=N; i++){
             A[i] = in.nextInt();
         }
     }
 
     static boolean determination(int X){
-        int last = 0;
-        for (int i=1; i<=M; i++){
-            if (A[i]-X<=last){
-                last = A[i]+X;
-            } else {
-                return false;
+        int count = 0;
+        for (int i=1; i<=N; i++){
+            if (A[i]/X>=1){
+                count+=A[i]/X;
             }
         }
-        return last>=N;
+
+        return count>=K;
     }
 
     static void pro(){
-        int L=1, R = N, ans=0;
-        Arrays.sort(A, 1, M+1);
+        long L = 1, R = Integer.MAX_VALUE, ans=0;
         while(L<=R){
-            int mid = (L+R)/2;
-            if (determination(mid)){
-                R = mid-1;
+            long mid = (L+R)/2;
+            if (determination((int)mid)){
+                L = mid+1;
                 ans = mid;
             }
             else {
-                L = mid+1;
+                R = mid-1;
             }
         }
+
         sb.append(ans);
     }
 

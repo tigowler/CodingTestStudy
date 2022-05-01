@@ -1,59 +1,40 @@
-package questions;
+package ParametricSearch;
 
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Q6236 {
+public class Q1300 {
     static FastReader in = new FastReader();
     static StringBuilder sb = new StringBuilder();
-    static int N, M;
-    static int[] A;
+    static int N;
+    static int k;
 
     static void input(){
         N = in.nextInt();
-        M = in.nextInt();
-        A = new int[N+1];
-        for (int i=1; i<=N; i++){
-            A[i] = in.nextInt();
-        }
-    }
-
-    static boolean determination(int X){
-        int count=1, rest=X;
-        for (int i=1; i<=N; i++){
-            if (rest<A[i]){
-                rest=X;
-                count++;
-            }
-            rest-=A[i];
-        }
-        return count<=M;
+        k = in.nextInt();
     }
 
     static void pro(){
-        int L = A[1];
-        for (int i=1; i<=N; i++){
-            L = Math.max(L, A[i]);
-        }
-        int R=10000*N, ans=0;
-        while(L<=R){
-            int mid = (L+R)/2;
-            if (determination(mid)){
-                R = mid-1;
-                ans = mid;
+        int left = 1, right = k;
+        while(left<right){
+            int count=0;
+            int mid = (left+right)/2;
+            for (int i=1; i<=N; i++){
+                count+=Math.min(mid/i, N);
+            }
+            if (k<=count){
+                right = mid;
             }
             else {
-                L = mid+1;
+                left = mid+1;
             }
         }
-
-        sb.append(ans);
+        System.out.println(right);
     }
 
     public static void main(String[] args) {
         input();
         pro();
-        System.out.println(sb);
     }
 
     static class FastReader {

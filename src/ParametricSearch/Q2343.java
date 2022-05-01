@@ -1,40 +1,67 @@
-package questions;
+package ParametricSearch;
 
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Q1300 {
+public class Q2343 {
     static FastReader in = new FastReader();
     static StringBuilder sb = new StringBuilder();
-    static int N;
-    static int k;
+    static int N, M;
+    static int[] A;
 
     static void input(){
         N = in.nextInt();
-        k = in.nextInt();
+        M = in.nextInt();
+        A = new int[N+1];
+        for (int i=1; i<=N; i++){
+            A[i] = in.nextInt();
+        }
+    }
+
+    static boolean determination(int X){
+        int sum = 0, count=0;
+        for (int i=1; i<=N; i++){
+            sum+=A[i];
+            if (sum==X){
+                count++;
+                sum=0;
+            }
+            else if (sum>X){
+                count++;
+                sum=A[i];
+            }
+        }
+
+        if (sum!=0) count++;
+
+        return count<=M;
     }
 
     static void pro(){
-        int left = 1, right = k;
-        while(left<right){
-            int count=0;
-            int mid = (left+right)/2;
-            for (int i=1; i<=N; i++){
-                count+=Math.min(mid/i, N);
-            }
-            if (k<=count){
-                right = mid;
+        int L=A[1], R=10000*N, ans=0;
+        //적어도 제일 긴 녹화본 길이만큼은 필요 !!
+        for (int i=1; i<=N; i++){
+            L = Math.max(L, A[i]);
+        }
+
+        while(L<=R){
+            int mid = (L+R)/2;
+            if (determination(mid)){
+                R =mid-1;
+                ans = mid;
             }
             else {
-                left = mid+1;
+                L = mid+1;
             }
         }
-        System.out.println(right);
+
+        sb.append(ans);
     }
 
     public static void main(String[] args) {
         input();
         pro();
+        System.out.println(sb);
     }
 
     static class FastReader {
