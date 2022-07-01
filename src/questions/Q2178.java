@@ -15,7 +15,6 @@ public class Q2178 {
     static int[][] dist;
     static boolean[][] visit;
     static int[][] dir = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
-    static ArrayList<Integer> group;
 
     static void input() {
         N = scan.nextInt();
